@@ -16,8 +16,8 @@ export function Hero({ lang, t }: { lang: Locale; t: Dict }) {
           <source src="/video/hero.webm" type="video/webm" />
           <source src="/video/hero.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/60 to-ink/45" />
-        <div className="absolute inset-0 bg-gradient-to-r from-ink/70 via-transparent to-transparent rtl:bg-gradient-to-l" />
+        <div className="absolute inset-0 bg-gradient-to-t from-night via-night/60 to-night/45" />
+        <div className="absolute inset-0 bg-gradient-to-r from-night/70 via-transparent to-transparent rtl:bg-gradient-to-l" />
         <div aria-hidden className="drift absolute -bottom-1/3 start-[-10%] size-[70vw] max-w-[900px] rounded-full bg-magenta/25 blur-[140px]" />
       </div>
 

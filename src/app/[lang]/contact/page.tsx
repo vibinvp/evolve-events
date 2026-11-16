@@ -45,7 +45,7 @@ export default async function ContactPage({ params }: PageProps<"/[lang]/contact
             <ContactForm t={c.form} lang={lang} />
           </div>
 
-          <aside className="tone-dark relative self-start overflow-hidden p-8 lg:col-span-5 lg:p-12" data-reveal>
+          <aside className="tone-dark relative self-start overflow-hidden border border-white/10 p-8 lg:col-span-5 lg:p-12" data-reveal>
             <div aria-hidden className="drift absolute -end-1/3 -top-1/4 size-[420px] rounded-full bg-magenta/25 blur-[110px]" />
             <div className="relative">
               <h3 className="display text-3xl">{c.after.title}</h3>

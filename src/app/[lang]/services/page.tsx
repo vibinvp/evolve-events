@@ -61,15 +61,15 @@ export default async function ServicesPage({ params }: PageProps<"/[lang]/servic
         {s.items.map((it, i) => (
           <section key={it.title} className="border-t border-[var(--line)] py-20 first:border-t-0 lg:py-32">
             <div className="container-x grid items-center gap-10 lg:grid-cols-12 lg:gap-20">
-              <div className={clsx("relative aspect-[5/4] overflow-hidden bg-ink lg:col-span-6", i % 2 && "lg:order-2")} data-clip>
+              <div className={clsx("relative aspect-[5/4] overflow-hidden bg-night lg:col-span-6", i % 2 && "lg:order-2")} data-clip>
                 <Image data-parallax src={it.image} alt={it.title} fill sizes="(min-width:1024px) 48vw, 100vw" className="scale-125 object-cover" />
               </div>
               <div className={clsx("lg:col-span-5", i % 2 ? "lg:col-start-1 lg:row-start-1" : "lg:col-start-8")}>
                 <span className="num text-brand text-7xl lg:text-8xl" data-reveal>0{i + 1}</span>
                 <h2 className="display mt-6 text-[clamp(2rem,3.6vw,3.4rem)]" data-reveal>{it.title}</h2>
                 <dl className="mt-8 space-y-5" data-reveal>
-                  <div><dt className="eyebrow text-purple before:hidden">{s.problem}</dt><dd className="mt-1.5 text-ink-soft">{it.problem}</dd></div>
-                  <div><dt className="eyebrow text-purple before:hidden">{s.outcome}</dt><dd className="mt-1.5 text-ink-soft">{it.outcome}</dd></div>
+                  <div><dt className="eyebrow text-lilac before:hidden">{s.problem}</dt><dd className="mt-1.5 text-ink-soft">{it.problem}</dd></div>
+                  <div><dt className="eyebrow text-lilac before:hidden">{s.outcome}</dt><dd className="mt-1.5 text-ink-soft">{it.outcome}</dd></div>
                 </dl>
                 <ul className="mt-8 border-b border-[var(--line)]" data-stagger>
                   {it.features.map((f) => (

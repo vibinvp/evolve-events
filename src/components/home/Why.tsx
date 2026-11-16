@@ -16,7 +16,7 @@ export function Why({ lang, t, tone = "paper" }: { lang: Locale; t: Dict; tone?:
               <SplitText text={w.titleA} /> <SplitText className="accent" text={w.titleB} />
             </h2>
             <p className="mt-8 max-w-md text-lg text-ink-soft" data-reveal>{w.body}</p>
-            <div className="mt-10 rounded-sm bg-ink p-7 text-white" data-reveal>
+            <div className="mt-10 border border-[var(--line)] bg-night p-7 text-white" data-reveal>
               <p className="text-white/80">{w.strip}</p>
               <div className="mt-6"><ButtonLink href={`/${lang}/contact`} variant="light">{t.common.consult}</ButtonLink></div>
             </div>

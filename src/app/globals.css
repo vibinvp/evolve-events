@@ -4,12 +4,14 @@
    Warm paper + aubergine ink, with the logo's magenta → purple used sparingly:
    numerals, rules, hover fills and one italic word per headline. */
 :root {
-  --paper: #faf7f2;
-  --paper-2: #f1ece3;
-  --ink: #120d1a;
+  --paper: #0b0812;
+  --paper-2: #141020;
+  --night: #050308;
+  --ink: #f4f0f9;
   --ink-2: #1b1425;
-  --ink-soft: #5a5266;
-  --line: rgba(18, 13, 26, 0.14);
+  --ink-soft: rgba(244, 240, 249, 0.68);
+  --lilac: #b98cf2;
+  --line: rgba(255, 255, 255, 0.15);
   --line-light: rgba(255, 255, 255, 0.18);
   --magenta: #de2e97;
   --purple: #7f3fbf;
@@ -22,6 +24,8 @@
   --color-paper-2: var(--paper-2);
   --color-ink: var(--ink);
   --color-ink-2: var(--ink-2);
+  --color-night: var(--night);
+  --color-lilac: var(--lilac);
   --color-ink-soft: var(--ink-soft);
   --color-line: var(--line);
   --color-magenta: var(--magenta);
@@ -63,7 +67,7 @@ body {
 html[dir="rtl"] .display { font-weight: 600; letter-spacing: 0; line-height: 1.3; }
 
 .text-brand, .accent {
-  background-image: linear-gradient(100deg, var(--magenta) 10%, var(--purple) 90%);
+  background-image: linear-gradient(100deg, #ee4cac 10%, #a66cf0 90%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -73,10 +77,10 @@ html[dir="rtl"] .display { font-weight: 600; letter-spacing: 0; line-height: 1.3
 html[dir="rtl"] .accent { font-style: normal; }
 html[dir="rtl"] .text-brand, html[dir="rtl"] .accent { background-image: linear-gradient(260deg, var(--magenta) 10%, var(--purple) 90%); }
 .text-brand .word-inner, .accent .word-inner {
-  background-image: linear-gradient(100deg, var(--magenta) 10%, var(--purple) 90%);
+  background-image: linear-gradient(100deg, #ee4cac 10%, #a66cf0 90%);
   -webkit-background-clip: text; background-clip: text; color: transparent; padding-inline: 0.04em;
 }
-html[dir="rtl"] .text-brand .word-inner, html[dir="rtl"] .accent .word-inner { background-image: linear-gradient(260deg, var(--magenta) 10%, var(--purple) 90%); }
+html[dir="rtl"] .text-brand .word-inner, html[dir="rtl"] .accent .word-inner { background-image: linear-gradient(260deg, #ee4cac 10%, #a66cf0 90%); }
 .bg-brand { background-image: linear-gradient(100deg, var(--magenta), var(--purple)); }
 html[dir="rtl"] .bg-brand { background-image: linear-gradient(260deg, var(--magenta), var(--purple)); }
 
@@ -95,7 +99,7 @@ html[dir="rtl"] .flip-rtl { transform: scaleX(-1); }
 /* Tones */
 .tone-paper { background: var(--paper); color: var(--ink); }
 .tone-paper-2 { background: var(--paper-2); color: var(--ink); }
-.tone-dark { background: var(--ink); color: #fff; --ink-soft: rgba(255,255,255,0.68); --line: var(--line-light); }
+.tone-dark { background: var(--night); color: #fff; --ink-soft: rgba(255,255,255,0.68); --line: var(--line-light); }
 
 /* ───────── Hover primitives ───────── */
 .link-draw { position: relative; display: inline-block; }
@@ -148,7 +152,7 @@ html.seen .preloader { display: none !important; }
   transition: border-color 0.3s;
 }
 .field:focus { border-color: var(--magenta); }
-.field::placeholder { color: rgba(18,13,26,0.35); }
+.field::placeholder { color: rgba(244,240,249,0.38); }
 .field[aria-invalid="true"] { border-color: #c0262d; }
 
 /* ───── Hero balloons and bubbles (hero only) ───── */

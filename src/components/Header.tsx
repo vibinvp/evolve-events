@@ -51,14 +51,14 @@ export function Header({ lang, t }: { lang: Locale; t: Dict["nav"] }) {
       className={clsx(
         "fixed inset-x-0 top-0 z-50 transition-[background-color,box-shadow,color] duration-500",
         solid ? "bg-paper/90 text-ink shadow-[0_1px_0_var(--line)] backdrop-blur-xl" : "text-white",
-        open && "bg-ink",
+        open && "bg-night",
       )}
     >
       <div className="container-x flex h-[4.5rem] items-center justify-between gap-6 lg:h-24">
         <Link href={`/${lang}`} aria-label={t.home} className="shrink-0">
           <Image
             src="/img/logo.png" alt="Evolve Events" width={142} height={94} priority
-            className={clsx("h-11 w-auto transition-[filter] duration-500 lg:h-14", light && "brightness-0 invert")}
+            className="h-11 w-auto brightness-0 invert lg:h-14"
           />
         </Link>
 
@@ -82,7 +82,7 @@ export function Header({ lang, t }: { lang: Locale; t: Dict["nav"] }) {
           <Link href={`/${lang}/contact`}
             className={clsx(
               "group inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-500 active:scale-[0.97]",
-              light ? "bg-white text-ink hover:bg-brand hover:text-white" : "bg-ink text-white hover:bg-brand",
+              "bg-white text-night hover:bg-brand hover:text-white",
             )}>
             {t.plan}
             <ArrowUpRight className="flip-rtl size-4 transition-transform duration-500 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
@@ -98,7 +98,7 @@ export function Header({ lang, t }: { lang: Locale; t: Dict["nav"] }) {
 
       {/* Full-screen menu */}
       <div id="mobile-menu" hidden={!open}
-        className="fixed inset-x-0 bottom-0 top-[4.5rem] overflow-y-auto bg-ink text-white lg:hidden">
+        className="fixed inset-x-0 bottom-0 top-[4.5rem] overflow-y-auto bg-night text-white lg:hidden">
         <div className="container-x flex min-h-full flex-col justify-between gap-12 pb-10 pt-6">
           <nav className="flex flex-col" aria-label="Mobile">
             {links.map((l, i) => (

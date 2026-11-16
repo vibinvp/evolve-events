@@ -59,7 +59,7 @@ export function ServiceIndex({ items, cta, href }: { items: Item[]; cta: string;
       </ul>
 
       <div className="relative hidden lg:col-span-5 lg:block">
-        <div className="sticky top-28 aspect-[4/5] overflow-hidden bg-ink">
+        <div className="sticky top-28 aspect-[4/5] overflow-hidden bg-night">
           {items.map((it, i) => (
             <Image
               key={it.image}
@@ -70,7 +70,7 @@ export function ServiceIndex({ items, cta, href }: { items: Item[]; cta: string;
               className={clsx("object-cover transition-all duration-[900ms] ease-out", i === active ? "scale-100 opacity-100" : "scale-110 opacity-0")}
             />
           ))}
-          <div className="absolute inset-0 bg-gradient-to-t from-ink/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-night/40 to-transparent" />
           <span className="num absolute bottom-6 start-6 text-7xl text-white/90">0{active + 1}</span>
         </div>
       </div>

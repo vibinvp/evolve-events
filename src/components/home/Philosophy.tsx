@@ -15,7 +15,7 @@ export function Philosophy({ lang, t }: { lang: Locale; t: Dict }) {
       <Section>
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-3">
-            <Eyebrow className="text-purple">{p.badge}</Eyebrow>
+            <Eyebrow className="text-lilac">{p.badge}</Eyebrow>
           </div>
           <div className="lg:col-span-9">
             <h2 className="display text-[clamp(2.4rem,5.4vw,5.2rem)]">
@@ -50,9 +50,9 @@ export function Philosophy({ lang, t }: { lang: Locale; t: Dict }) {
       </Section>
 
       {/* wide photograph */}
-      <div className="relative h-[70svh] overflow-hidden bg-ink lg:h-[92svh]" data-clip>
+      <div className="relative h-[70svh] overflow-hidden bg-night lg:h-[92svh]" data-clip>
         <Image data-parallax src="/img/gallery/2.webp" alt={p.imageAlt} fill sizes="100vw" className="scale-125 object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-night/50 to-transparent" />
       </div>
 
       {/* testimonial */}

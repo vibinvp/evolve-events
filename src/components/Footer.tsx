@@ -16,7 +16,7 @@ export function Footer({ lang, t }: { lang: Locale; t: Dict }) {
   const head = "mb-6 text-xs font-semibold uppercase tracking-[0.2em] text-white/45 rtl:tracking-normal rtl:text-sm";
 
   return (
-    <footer className="tone-dark relative overflow-hidden">
+    <footer className="tone-dark relative overflow-hidden border-t border-white/10">
       <div className="container-x relative pt-24 lg:pt-32">
         {/* the one big action */}
         <a href={`mailto:${CONTACT.email}`} dir="ltr"

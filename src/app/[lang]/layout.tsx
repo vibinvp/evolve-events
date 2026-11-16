@@ -9,6 +9,7 @@ import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { Motion } from "@/components/Motion";
 import { Preloader } from "@/components/Preloader";
+import SplashCursor from "@/components/SplashCursor";
 
 const latin = Hanken_Grotesk({
   subsets: ["latin"],
@@ -29,7 +30,7 @@ const arabic = IBM_Plex_Sans_Arabic({
   display: "swap",
 });
 
-export const viewport: Viewport = { themeColor: "#120d1a" };
+export const viewport: Viewport = { themeColor: "#0b0812" };
 
 export function generateStaticParams() {
   return locales.map((lang) => ({ lang }));
@@ -60,12 +61,13 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
       <body>
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:fixed focus:start-4 focus:top-4 focus:z-[200] focus:rounded-full focus:bg-ink focus:px-5 focus:py-3 focus:text-sm focus:text-white"
+          className="sr-only focus:not-sr-only focus:fixed focus:start-4 focus:top-4 focus:z-[200] focus:rounded-full focus:bg-night focus:px-5 focus:py-3 focus:text-sm focus:text-white"
         >
           {t.nav.skip}
         </a>
         <Preloader />
         <Motion />
+        <SplashCursor />
         <Header lang={lang} t={t.nav} />
         {children}
         <Footer lang={lang} t={t} />

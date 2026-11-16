@@ -16,10 +16,10 @@ const base =
 
 /* A fill slides up on hover; the label stays put. */
 const styles = {
-  primary: "bg-ink text-white before:bg-brand",
-  light: "bg-white text-ink before:bg-brand hover:text-white",
-  outline: "border border-ink/25 text-ink before:bg-ink hover:text-white hover:border-ink",
-  "outline-light": "border border-white/40 text-white before:bg-white hover:text-ink hover:border-white",
+  primary: "bg-white text-night before:bg-brand hover:text-white",
+  light: "bg-white text-night before:bg-brand hover:text-white",
+  outline: "border border-white/30 text-white before:bg-white hover:text-night hover:border-white",
+  "outline-light": "border border-white/40 text-white before:bg-white hover:text-night hover:border-white",
 };
 
 export function ButtonLink({ href, children, variant = "primary", arrow = true, className, external }: Props) {

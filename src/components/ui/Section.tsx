@@ -13,7 +13,7 @@ export function Section({
 }
 
 export function Eyebrow({ children, className }: { children: React.ReactNode; className?: string }) {
-  return <p className={clsx("eyebrow text-purple", className)} data-reveal>{children}</p>;
+  return <p className={clsx("eyebrow text-lilac", className)} data-reveal>{children}</p>;
 }
 
 /** Hairline that draws itself in when it scrolls into view. */

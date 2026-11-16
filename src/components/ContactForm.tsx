@@ -63,7 +63,7 @@ export function ContactForm({ t, lang }: { t: Dict["contact"]["form"]; lang: str
   const input = () => "field";
   const label = "block text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft rtl:tracking-normal rtl:text-sm";
   const err = (k: keyof Fields) =>
-    errors[k] && <p id={`e-${k}`} className="mt-1.5 text-sm font-medium text-red-600">{errors[k]}</p>;
+    errors[k] && <p id={`e-${k}`} className="mt-1.5 text-sm font-medium text-red-400">{errors[k]}</p>;
   const a11y = (k: keyof Fields) => ({ "aria-invalid": !!errors[k], "aria-describedby": errors[k] ? `e-${k}` : undefined });
 
   return (
@@ -103,11 +103,11 @@ export function ContactForm({ t, lang }: { t: Dict["contact"]["form"]; lang: str
         <label>Website<input name="website" tabIndex={-1} autoComplete="off" value={data.website} onChange={change} /></label>
       </div>
 
-      {status === "error" && <p role="alert" className="bg-red-50 px-5 py-4 text-sm font-medium text-red-700">{t.errSubmit}</p>}
+      {status === "error" && <p role="alert" className="bg-red-950/50 px-5 py-4 text-sm font-medium text-red-300">{t.errSubmit}</p>}
 
       <button
         disabled={status === "sending"}
-        className="group relative inline-flex w-full items-center justify-between gap-3 overflow-hidden rounded-full bg-ink px-8 py-5 font-semibold text-white transition active:scale-[0.98] disabled:opacity-60 before:absolute before:inset-0 before:translate-y-full before:bg-brand before:transition-transform before:duration-500 hover:before:translate-y-0"
+        className="group relative inline-flex w-full items-center justify-between gap-3 overflow-hidden rounded-full bg-white px-8 py-5 font-semibold text-night transition hover:text-white active:scale-[0.98] disabled:opacity-60 before:absolute before:inset-0 before:translate-y-full before:bg-brand before:transition-transform before:duration-500 hover:before:translate-y-0"
       >
         <span className="relative z-10">{status === "sending" ? t.sending : t.submit}</span>
         {status === "sending" ? <Loader2 className="relative z-10 size-5 animate-spin" /> : <ArrowUpRight className="flip-rtl relative z-10 size-5" />}

@@ -31,7 +31,7 @@ export function Process({ lang, t }: { lang: Locale; t: Dict }) {
             <li key={s.title}>
               <div className="relative aspect-[16/10] overflow-hidden" data-clip>
                 <Image data-parallax src={s.image} alt="" fill sizes="(min-width:1024px) 55vw, 100vw" className="scale-125 object-cover" />
-                <div className="absolute inset-0 bg-ink/20" />
+                <div className="absolute inset-0 bg-night/20" />
               </div>
               <div className="mt-8 grid gap-4 sm:grid-cols-[auto_1fr] sm:gap-10" data-reveal>
                 <span className="num text-brand text-7xl">0{i + 1}</span>

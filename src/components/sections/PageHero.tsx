@@ -10,7 +10,7 @@ export function PageHero({
     <section className="tone-dark relative isolate flex min-h-[86svh] items-end overflow-hidden">
       <div className="absolute inset-0 -z-10" data-clip="hero">
         <Image src={image} alt="" fill priority sizes="100vw" className="object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/65 to-ink/35" />
+        <div className="absolute inset-0 bg-gradient-to-t from-night via-night/65 to-night/35" />
         <div aria-hidden className="drift absolute -top-1/4 end-[-10%] size-[55vw] max-w-[760px] rounded-full bg-purple/35 blur-[140px]" />
       </div>
       <div className="container-x pb-14 pt-44 lg:pb-20">

@@ -86,10 +86,10 @@ export function Gallery({ items, categories, allLabel, prevLabel, nextLabel, clo
             <li key={it.image + it.title} className={span}>
               <button
                 onClick={(e) => { opener.current = e.currentTarget; setActive(i); }}
-                className={clsx("group relative block aspect-[4/5] w-full overflow-hidden bg-ink text-start sm:aspect-square lg:aspect-auto", height)}
+                className={clsx("group relative block aspect-[4/5] w-full overflow-hidden bg-night text-start sm:aspect-square lg:aspect-auto", height)}
               >
                 <Image src={it.image} alt={it.title} fill sizes="(min-width:1024px) 55vw, (min-width:640px) 50vw, 100vw" className="object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-[1.04]" />
-                <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-transparent opacity-80 transition-opacity duration-500 group-hover:opacity-100" />
+                <div className="absolute inset-0 bg-gradient-to-t from-night/80 via-night/10 to-transparent opacity-80 transition-opacity duration-500 group-hover:opacity-100" />
                 <div className="absolute inset-x-0 bottom-0 p-6 text-white lg:p-8">
                   <p className="text-xs font-semibold uppercase tracking-[0.16em] text-white/70 rtl:tracking-normal">{it.category}</p>
                   <h3 className="display mt-2 text-2xl lg:text-3xl">{it.title}</h3>
@@ -106,7 +106,7 @@ export function Gallery({ items, categories, allLabel, prevLabel, nextLabel, clo
           role="dialog"
           aria-modal="true"
           aria-label={current.title}
-          className="fixed inset-0 z-[150] grid place-items-center bg-ink/90 p-4 backdrop-blur-sm"
+          className="fixed inset-0 z-[150] grid place-items-center bg-night/90 p-4 backdrop-blur-sm"
           onClick={(e) => e.target === e.currentTarget && close()}
           data-lenis-prevent
         >
@@ -126,7 +126,7 @@ export function Gallery({ items, categories, allLabel, prevLabel, nextLabel, clo
             </div>
             <h3 className="mt-6 text-2xl font-bold">{current.title}</h3>
             <p className="mb-7 mt-1 text-white/65">{current.category} · {current.meta}</p>
-            <Link href={ctaHref} className="inline-flex items-center gap-2.5 rounded-full bg-white px-8 py-4 font-semibold text-ink transition-colors hover:bg-brand hover:text-white">
+            <Link href={ctaHref} className="inline-flex items-center gap-2.5 rounded-full bg-white px-8 py-4 font-semibold text-night transition-colors hover:bg-brand hover:text-white">
               {ctaLabel}<ArrowRight className="flip-rtl size-4" />
             </Link>
           </div>

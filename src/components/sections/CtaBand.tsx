@@ -11,7 +11,7 @@ export function CtaBand({
     <section className="tone-dark relative isolate flex min-h-[88svh] items-end overflow-hidden">
       <div className="absolute inset-0 -z-10" data-clip>
         <Image data-parallax src={image} alt="" fill sizes="100vw" className="scale-125 object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/80 to-ink/55" />
+        <div className="absolute inset-0 bg-gradient-to-t from-night via-night/80 to-night/55" />
         <div aria-hidden className="drift absolute -bottom-1/4 end-[-10%] size-[60vw] max-w-[800px] rounded-full bg-magenta/30 blur-[140px]" />
       </div>
       <div className="container-x py-24 lg:py-32">

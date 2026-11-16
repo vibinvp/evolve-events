@@ -96,7 +96,7 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
             </div>
           </div>
           <div className="lg:col-span-6">
-            <h3 className="eyebrow mb-6 text-purple" data-reveal>{a.standard.deliverTitle}</h3>
+            <h3 className="eyebrow mb-6 text-lilac" data-reveal>{a.standard.deliverTitle}</h3>
             <ul className="border-b border-[var(--line)]" data-stagger>
               {a.standard.deliver.map((d) => (
                 <li key={d.title} className="border-t border-[var(--line)] py-7">
