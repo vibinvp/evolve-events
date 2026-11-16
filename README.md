@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Evolve Events — Next.js site
 
-## Getting Started
+Next.js (App Router) · TypeScript · Tailwind CSS 4 · GSAP + Lenis · English / Arabic (RTL)
 
-First, run the development server:
+## Run
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+    npm install
+    npm run dev        # http://localhost:3000 (redirects to /en or /ar)
+    npm run build && npm start
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Where things live
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- All page copy (EN): `src/i18n/en.ts`
+- All page copy (AR, same shape as EN): `src/i18n/ar.ts`
+- Locale redirect (`/` to `/en` or `/ar`): `src/proxy.ts`
+- Pages: `src/app/[lang]/*`
+- Brand colours, fonts, motion CSS: `src/app/globals.css`
+- Scroll/entrance animations: `src/components/Motion.tsx`, driven by `data-*` attributes
+  (`data-hero`, `data-reveal`, `data-stagger`, `data-split`, `data-clip`, `data-parallax`, `data-count`).
+  All are skipped for visitors who prefer reduced motion.
+- Contact form email: `src/app/api/contact/route.ts`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Contact form
 
-## Learn More
+Copy `.env.example` to `.env.local` and set `RESEND_API_KEY` plus a verified sender.
+Without it the API returns 503 and the form shows an error. It never pretends to send.
 
-To learn more about Next.js, take a look at the following resources:
+## Before launch
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Have a native Arabic speaker review `src/i18n/ar.ts`.
+- Confirm the stats, testimonial and "award-winning" claims (copied from the old site) are true.
+- Have the client's legal adviser replace the starter Privacy / Terms text.
+- Hero video is already compressed (MP4 + WebM, about 1.2 MB each, 14 s loop).
+- Set `NEXT_PUBLIC_SITE_URL`.
