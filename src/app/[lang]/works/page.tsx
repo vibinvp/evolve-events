@@ -39,7 +39,7 @@ export default async function WorksPage({ params }: PageProps<"/[lang]/works">) 
       <Section className="!pt-20 lg:!pt-28">
         <Gallery
           id="gallery"
-          items={w.items.map((i) => ({ image: i.image, title: i.title, category: i.category, meta: i.year }))}
+          items={w.items.map((i) => ({ image: i.image, video: "video" in i ? i.video : undefined, title: i.title, category: i.category, meta: i.year }))}
           categories={w.categories}
           allLabel={w.categories[0]}
           prevLabel={t.featured.prev}

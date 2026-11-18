@@ -4,10 +4,11 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import Image from "next/image";
 import Link from "next/link";
-import { X, ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
+import { X, ChevronLeft, ChevronRight, ArrowRight, Play } from "lucide-react";
 import clsx from "clsx";
 
-export type GalleryItem = { image: string; title: string; category: string; meta: string };
+/** `image` is the photo, or the poster frame when `video` is set. */
+export type GalleryItem = { image: string; title: string; category: string; meta: string; video?: string };
 
 type Props = {
   items: GalleryItem[];
@@ -90,6 +91,11 @@ export function Gallery({ items, categories, allLabel, prevLabel, nextLabel, clo
               >
                 <Image src={it.image} alt={it.title} fill sizes="(min-width:1024px) 55vw, (min-width:640px) 50vw, 100vw" className="object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-[1.04]" />
                 <div className="absolute inset-0 bg-gradient-to-t from-night/80 via-night/10 to-transparent opacity-80 transition-opacity duration-500 group-hover:opacity-100" />
+                {it.video && (
+                  <span aria-hidden className="absolute end-5 top-5 grid size-14 place-items-center rounded-full bg-white/90 text-night shadow-lg transition-transform duration-500 group-hover:scale-110">
+                    <Play className="size-6 translate-x-px fill-current rtl:-translate-x-px rtl:-scale-x-100" />
+                  </span>
+                )}
                 <div className="absolute inset-x-0 bottom-0 p-6 text-white lg:p-8">
                   <p className="text-xs font-semibold uppercase tracking-[0.16em] text-white/70 rtl:tracking-normal">{it.category}</p>
                   <h3 className="display mt-2 text-2xl lg:text-3xl">{it.title}</h3>
@@ -122,7 +128,21 @@ export function Gallery({ items, categories, allLabel, prevLabel, nextLabel, clo
 
           <div className="w-full max-w-4xl text-center text-white">
             <div className="relative mx-auto aspect-[4/3] max-h-[68vh] w-full overflow-hidden ">
-              <Image src={current.image} alt={current.title} fill sizes="(min-width:1024px) 56rem, 100vw" className="object-contain" priority />
+              {current.video ? (
+                <video
+                  key={current.video}
+                  src={current.video}
+                  poster={current.image}
+                  controls
+                  autoPlay
+                  playsInline
+                  preload="metadata"
+                  aria-label={current.title}
+                  className="size-full bg-black object-contain"
+                />
+              ) : (
+                <Image src={current.image} alt={current.title} fill sizes="(min-width:1024px) 56rem, 100vw" className="object-contain" priority />
+              )}
             </div>
             <h3 className="mt-6 text-2xl font-bold">{current.title}</h3>
             <p className="mb-7 mt-1 text-white/65">{current.category} · {current.meta}</p>

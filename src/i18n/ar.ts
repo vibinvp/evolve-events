@@ -245,6 +245,9 @@ export const ar: Dict = {
       { image: "/img/gallery/10.webp", title: "حفل الجوائز السنوي", type: "فعالية شركات", attendees: "1,000+", year: "2024" },
       { image: "/img/gallery/11.webp", title: "حفل غالا خيري", type: "فعالية عامة", attendees: "600+", year: "2024" },
       { image: "/img/gallery/12.webp", title: "المهرجان الثقافي", type: "فعالية عامة", attendees: "20,000+", year: "2024" },
+      { image: "/img/gallery/reel-1.webp", video: "/video/reel-1.mp4", title: "خلف الكواليس: بناء الجناح", type: "معرض", attendees: "", year: "2026" },
+      { image: "/img/gallery/reel-2.webp", video: "/video/reel-2.mp4", title: "خلف الكواليس: تجهيز القاعة", type: "معرض", attendees: "", year: "2026" },
+      { image: "/img/gallery/reel-3.webp", video: "/video/reel-3.mp4", title: "خلف الكواليس: التركيب الليلي", type: "تنشيط علامة تجارية", attendees: "", year: "2026" },
     ],
   },
 
@@ -554,6 +557,9 @@ export const ar: Dict = {
       { title: "بطولة رمضان", category: "الفعاليات الرياضية", year: "2025", image: "/img/ramadan-tournament.webp" },
       { title: "تجربة إطلاق علامة تجارية", category: "تنشيط العلامات التجارية", year: "2024", image: "/img/brand-launch.webp" },
       { title: "قمة القيادة للشركات", category: "فعاليات الشركات", year: "2025", image: "/img/corporate.webp" },
+      { title: "خلف الكواليس: بناء الجناح", category: "المعارض", year: "2026", image: "/img/gallery/reel-1.webp", video: "/video/reel-1.mp4" },
+      { title: "خلف الكواليس: تجهيز القاعة", category: "المعارض", year: "2026", image: "/img/gallery/reel-2.webp", video: "/video/reel-2.mp4" },
+      { title: "خلف الكواليس: التركيب الليلي", category: "تنشيط العلامات التجارية", year: "2026", image: "/img/gallery/reel-3.webp", video: "/video/reel-3.mp4" },
     ],
     modalCta: "خطط لفعالية مماثلة",
     cta: {

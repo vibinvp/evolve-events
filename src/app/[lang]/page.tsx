@@ -50,7 +50,7 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
         <SectionHead split eyebrow={f.eyebrow} title={<>{f.titleA} <span className="accent">{f.titleB}</span></>} body={f.body} />
         <div className="mt-16 lg:mt-24" data-reveal>
           <Gallery
-            items={f.projects.map((p) => ({ image: p.image, title: p.title, category: p.type, meta: `${p.attendees} ${f.attendees} · ${p.year}` }))}
+            items={f.projects.map((p) => ({ image: p.image, video: "video" in p ? p.video : undefined, title: p.title, category: p.type, meta: p.attendees ? `${p.attendees} ${f.attendees} · ${p.year}` : p.year }))}
             categories={f.categories}
             allLabel={f.all}
             prevLabel={f.prev}

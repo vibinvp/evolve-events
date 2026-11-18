@@ -27,7 +27,7 @@ export function Footer({ lang, t }: { lang: Locale; t: Dict }) {
 
         <div className="grid gap-14 py-16 lg:grid-cols-12">
           <div className="lg:col-span-4">
-            <Image src="/img/logo.png" alt="Evolve Events" width={142} height={94} className="mb-6 h-16 w-auto brightness-0 invert" />
+            <Image src="/img/logo.png" alt="Evolve Events" width={142} height={94} className="mb-6 h-16 w-auto" />
             <p className="max-w-sm text-sm leading-relaxed text-white/60">{f.about}</p>
           </div>
 

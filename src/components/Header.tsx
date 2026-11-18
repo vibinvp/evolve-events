@@ -58,7 +58,7 @@ export function Header({ lang, t }: { lang: Locale; t: Dict["nav"] }) {
         <Link href={`/${lang}`} aria-label={t.home} className="shrink-0">
           <Image
             src="/img/logo.png" alt="Evolve Events" width={142} height={94} priority
-            className="h-11 w-auto brightness-0 invert lg:h-14"
+            className="h-11 w-auto lg:h-14"
           />
         </Link>
 

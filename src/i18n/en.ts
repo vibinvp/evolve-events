@@ -243,6 +243,9 @@ export const en = {
       { image: "/img/gallery/10.webp", title: "Annual Awards Ceremony", type: "Corporate Event", attendees: "1,000+", year: "2024" },
       { image: "/img/gallery/11.webp", title: "Charity Fundraiser Gala", type: "Public Event", attendees: "600+", year: "2024" },
       { image: "/img/gallery/12.webp", title: "Cultural Festival", type: "Public Event", attendees: "20,000+", year: "2024" },
+      { image: "/img/gallery/reel-1.webp", video: "/video/reel-1.mp4", title: "Behind the Scenes: Stand Build", type: "Exhibition", attendees: "", year: "2026" },
+      { image: "/img/gallery/reel-2.webp", video: "/video/reel-2.mp4", title: "Behind the Scenes: Hall Setup", type: "Exhibition", attendees: "", year: "2026" },
+      { image: "/img/gallery/reel-3.webp", video: "/video/reel-3.mp4", title: "Behind the Scenes: Night Install", type: "Brand Activation", attendees: "", year: "2026" },
     ],
   },
 
@@ -552,6 +555,9 @@ export const en = {
       { title: "Ramadan Tournament", category: "Sports Events", year: "2025", image: "/img/ramadan-tournament.webp" },
       { title: "Brand Launch Experience", category: "Brand Activations", year: "2024", image: "/img/brand-launch.webp" },
       { title: "Corporate Leadership Summit", category: "Corporate Events", year: "2025", image: "/img/corporate.webp" },
+      { title: "Behind the Scenes: Stand Build", category: "Exhibitions", year: "2026", image: "/img/gallery/reel-1.webp", video: "/video/reel-1.mp4" },
+      { title: "Behind the Scenes: Hall Setup", category: "Exhibitions", year: "2026", image: "/img/gallery/reel-2.webp", video: "/video/reel-2.mp4" },
+      { title: "Behind the Scenes: Night Install", category: "Brand Activations", year: "2026", image: "/img/gallery/reel-3.webp", video: "/video/reel-3.mp4" },
     ],
     modalCta: "Plan a Similar Event",
     cta: {
